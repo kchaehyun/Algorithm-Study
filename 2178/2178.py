@@ -8,20 +8,18 @@ def bfs(n, m, graph):
     queue = deque([(0, 0, 1)])
     visited[0][0] = True
     while queue:
-        a, b, dist = queue.popleft()
-        if a == n-1 and b == m-1:
+        x, y, dist = queue.popleft()
+        if x == n-1 and y == m-1:
             print(dist)
             return
         for i in range(4):
-            if 0 <= a+dy[i] <= (n-1) and 0 <= b+dx[i] <= (m-1) :
-                if graph[a+dy[i]][b+dx[i]] == 1 and not visited[a+dy[i]][b+dx[i]]:
-                    queue.append((a+dy[i], b+dx[i], dist+1))
-                    visited[a+dy[i]][b+dx[i]] = True
+            if 0 <= x+dx[i] <= (n-1) and 0 <= y+dy[i] <= (m-1) :
+                if graph[x+dx[i]][y+dy[i]] == 1 and not visited[x+dx[i]][y+dy[i]]:
+                    queue.append((x+dx[i], y+dy[i], dist+1))
+                    visited[x+dx[i]][y+dy[i]] = True
 
 N, M = map(int, input().split())
-graph = []
-for i in range(N) :
-    graph.append(list(map(int, input().strip())))
+graph = [list(map(int, input().strip())) for _ in range(N)]
 
 visited = [[False] * M for _ in range(N)]
 bfs(N, M, graph)

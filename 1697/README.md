@@ -30,7 +30,6 @@ from collections import deque
 input = sys.stdin.readline
 
 def bfs(num, target):
-    time = 0
     visited[num] = True
     queue = deque([(num, 0)])
     while queue:
