@@ -7,7 +7,7 @@
 
 ## 아이디어
 - N명의 사람 중 N/2명을 뽑아 스타트 팀을 구성하는 모든 조합을 찾는다.
-- N의 범위가 20으로 작기 때문에, **깊이 우선 탐색(DFS)**을 이용한 백트래킹이나 `itertools.combinations`를 사용한 완전 탐색으로 해결할 수 있다.
+- N의 범위가 20으로 작기 때문에, **깊이 우선 탐색**(DFS)을 이용한 백트래킹이나 `itertools.combinations`를 사용한 완전 탐색으로 해결할 수 있다.
 - 한 팀이 정해지면 나머지 팀은 자동으로 정해진다.
 
 ## 시간복잡도
@@ -68,7 +68,6 @@ print(diff)
 
 ### 2. `itertools.combinations` 코드
 ```python
-'''
 import sys
 from itertools import combinations
 input = sys.stdin.readline
@@ -96,7 +95,6 @@ for start_team in comb :
     diff = min(diff, abs(start_score - link_score))
 
 print(diff)
-'''
 ```
 - `combinations(players, N//2)`를 통해 N/2명의 스타트 팀으로 가능한 모든 조합을 생성한다.
 - 각 조합에 대해 반복문을 돌며 능력치 차이를 계산하고 최솟값을 찾는다.
