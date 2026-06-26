@@ -5,6 +5,7 @@ Each problem includes both the **solution code** and a **write-up (README.md)** 
 
 ## Programming Language 
 * Python
+* C++
 
 ## Problem Source
 * **Baekjoon Online Judge:** https://www.acmicpc.net/
@@ -12,25 +13,42 @@ Each problem includes both the **solution code** and a **write-up (README.md)** 
 
 ## Folder Structure
 ```bash
-├── ProblemNumber/
-│   ├── ProblemNumber.py        # My solution code
-│   └── README.md               # Problem analysis & solution approach
-├── programmers/
-│   └── ProblemNumber/
-│       ├── ProblemNumber.py         # My solution code
-│       └── README.md           # Problem analysis & solution approach
+├── C++/
+│   └── programmers/
+│       └── ProblemNumber/
+│           ├── ProblemNumber.cpp    # C++ solution code
+│           └── README.md            # Problem analysis & solution approach
+├── Python/
+│   ├── BOJ/
+│   │   └── ProblemNumber/
+│   │       ├── ProblemNumber.py     # Python solution code
+│   │       └── README.md            # Problem analysis & solution approach
+│   └── programmers/
+│       └── ProblemNumber/
+│           ├── ProblemNumber.py     # Python solution code
+│           └── README.md            # Problem analysis & solution approach
 ├── README.md
 ```
+
 For example:
 ```yaml
-1065/
- ├── 1065.py
- └── README.md
-1436/
- ├── 1436.py
- └── README.md
-programmers/
- └── 12906/
-     ├── 12906.py
-     └── README.md
+C++/
+ └── programmers/
+     └── 12906/
+         ├── 12906.cpp
+         └── README.md
+
+Python/
+ ├── BOJ/
+ │   └── 1065/
+ │       ├── 1065.py
+ │       └── README.md
+ └── programmers/
+     └── 12906/
+         ├── 12906.py
+         └── README.md
 ```
+
+## File Rule
+Only solution code and README files are committed.
+Build outputs and cache files such as `*.exe`, `*.obj`, `*.pdb`, `*.ilk`, `*.out`, and `__pycache__/` are excluded.
