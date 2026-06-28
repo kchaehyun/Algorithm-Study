@@ -1,5 +1,7 @@
 coding_test/
 __pycache__/
+build/
+.vscode/
 *.exe
 *.obj
 *.pdb
