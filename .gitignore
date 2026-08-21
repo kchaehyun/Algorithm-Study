@@ -1,5 +1,6 @@
 coding_test/
 __pycache__/
+README_TEMPLATE.md
 build/
 .vscode/
 *.exe
@@ -8,4 +9,3 @@ build/
 *.ilk
 *.o
 *.out
-C++/programmers/README_TEMPLATE.md
